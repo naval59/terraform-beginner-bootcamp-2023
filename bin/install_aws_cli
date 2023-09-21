@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+      cd /workspace
+      file_to_remove="/workspace/aws"
+      echo "$file_to_remove gonna delete"
+      if [ -e "$file_to_remove" ]; then
+         rm -rf "$file_to_remove"
+      fi
+      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      unzip awscliv2.zip
+      sudo ./aws/install
+      cd $PROJECT_ROOT
+      aws sts get-caller-identity
