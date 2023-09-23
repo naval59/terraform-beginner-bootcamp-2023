@@ -85,3 +85,27 @@ update token value in below file with token value :
 ## Automate the workaround
 Set up a bash script to generate tfrc json file
 Store terraform cred in gp env and env variable
+
+## Setup Alias for terraform command
+
+Write a bash script toi setup alias for ```terraform command```
+````sh
+#!/usr/bin/env bash
+
+# Define the desired alias and the command it should run
+desired_alias="tf"
+command_to_alias="terraform"
+
+# Define the path to the ~/.bash_profile file
+bash_profile="$HOME/.bash_profile"
+
+# Check if the alias already exists in ~/.bash_profile
+if grep -q "alias $desired_alias='$command_to_alias'" "$bash_profile"; then
+  echo "Alias '$desired_alias' already exists in $bash_profile."
+else
+  # If the alias doesn't exist, add it to ~/.bash_profile
+  echo "alias $desired_alias='$command_to_alias'" >> "$bash_profile"
+  source "$bash_profile"  # Apply the changes in the current session
+  echo "Alias '$desired_alias' set for '$command_to_alias' in $bash_profile."
+fi
+```
