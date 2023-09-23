@@ -63,3 +63,22 @@ Critical file and contains sensitive data.Should store securely
 ### Terraform Destroy
 ```terraform destroy ``` this will destroy the resource created .
 eg: s3 bucket craeted will be destroyed
+
+## Issues with Terraform cloud login and gitpod
+when we try to login terraform cloud  it throws error related invalid token
+
+## Workaround 
+Manually add the token and create file manually to fix it 
+```sh
+touch /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+update token value in below file with token value :
+```json
+{
+    "credentials": {
+      "app.terraform.io": {
+        "token": "sdghjshdjhjah"
+      }
+    }
+  }
+```
