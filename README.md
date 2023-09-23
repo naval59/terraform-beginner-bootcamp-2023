@@ -58,3 +58,8 @@ Critical file and contains sensitive data.Should store securely
 
 ### Terraform Directory
 `.terraform` contains the binaries from the providers we atre using 
+
+
+### Terraform Destroy
+```terraform destroy ``` this will destroy the resource created .
+eg: s3 bucket craeted will be destroyed
