@@ -107,5 +107,7 @@ else
   echo "alias $desired_alias='$command_to_alias'" >> "$bash_profile"
   source "$bash_profile"  # Apply the changes in the current session
   echo "Alias '$desired_alias' set for '$command_to_alias' in $bash_profile."
-fi
+fi 
+
 ```
+Can test aftetr opening a new git pod and try `tf`
