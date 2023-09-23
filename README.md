@@ -82,3 +82,6 @@ update token value in below file with token value :
     }
   }
 ```
+## Automate the workaround
+Set up a bash script to generate tfrc json file
+Store terraform cred in gp env and env variable
