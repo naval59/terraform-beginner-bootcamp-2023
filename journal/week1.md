@@ -48,3 +48,18 @@ Files named exactly terraform.tfvars or terraform.tfvars.json.
 
 
 [Terraform input variables](https://developer.hashicorp.com/terraform/language/values/variables)
+
+## Dealing with configuration drift
+
+## What happen if we lose our state file?
+If we lose terraform state file .We need to manually delete all the instances.
+We can use ```terraform import``` but you need to refer the documents of providers 
+
+### Fix missing resources with Terraform import
+```terraform import aws_s3_bucket.bucket bucket-name```
+ [Terraform Import] (https://developer.hashicorp.com/terraform/cli/import#import)
+
+### Fix manual configuration
+
+If we manually delete instance or configs by mistake.
+Running```terraform plan``` will check terraform state file and put the missing or broken part back.
