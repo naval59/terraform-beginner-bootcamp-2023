@@ -23,6 +23,6 @@ provider "aws" {
 
 }
 
-provider "random" {
-  # Configuration options
-}
+# provider "random" {
+#   # Configuration options
+# }
