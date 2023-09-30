@@ -38,3 +38,13 @@ variable "error_html_filepath" {
     error_message = "The specified error_html_filepath does not exist on your local filesystem."
   }
 }
+
+variable "content_version" {
+  description = "The version of the content (positive integer starting at 1)."
+  type        = number
+
+  validation {
+    condition     = var.content_version >= 1 && can(regex("^[0-9]+$", tostring(var.content_version)))
+    error_message = "content_version must be a positive integer starting at 1."
+  }
+}
