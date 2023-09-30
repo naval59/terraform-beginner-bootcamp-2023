@@ -63,3 +63,33 @@ We can use ```terraform import``` but you need to refer the documents of provide
 
 If we manually delete instance or configs by mistake.
 Running```terraform plan``` will check terraform state file and put the missing or broken part back.
+
+## Terraform modules
+### Terraform module structure:
+Its recomended to keep the modules in ```modules```  directory.
+
+
+### Passing input variables:
+We can pass input variables to modules .
+Module has to define/declare the variables in variables.tf file 
+```tf
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+```
+### Module sources
+[Module sources](https://developer.hashicorp.com/terraform/language/modules/sources)
+
+Using the sources we can import the module from various places like
+- Github
+- Hashicorp 
+- Terraform Registry
+- Locally
+```tf
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+
+}
+```
