@@ -211,3 +211,15 @@ resource "aws_instance" "web" {
 
 ```
 ((https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec))
+
+## For Each Expression Terraform
+
+For eeach allow us to enumerate over complex data types
+```sh
+[for s in var.list : upper(s)]
+
+```
+Mostly useful when you built multiple resources and can help to reduce code size too.
+
+[For_each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
+(https://developer.hashicorp.com/terraform/language/expressions/for)
