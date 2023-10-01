@@ -1,3 +1,4 @@
+/*
 resource "aws_cloudfront_origin_access_control" "default" {
   name                              = "OAC ${var.bucket_name}"
   description                       = "Origin Access Controlsfor static website hosting ${var.bucket_name}"
@@ -65,3 +66,4 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
     cloudfront_default_certificate = true
   }
 }
+*/
