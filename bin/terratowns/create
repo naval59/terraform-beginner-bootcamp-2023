@@ -1,11 +1,14 @@
 #! /usr/bin/bash
 
-user_uuid="e328f4ab-b99f-421c-84c9-4ccea042c7d1" 
-token="9b49b3fb-b8e9-483c-b703-97ba88eef8e0"
+#user_uuid="e328f4ab-b99f-421c-84c9-4ccea042c7d1" 
+user_uuid="42f190eb-0796-4185-be6e-afe3a8b83d41"
+token="3492ba8a-885c-4009-ad38-f52739bf5f5a"
+#token="9b49b3fb-b8e9-483c-b703-97ba88eef8e0"
 name="New House"
 description="A new house description"
 domain_name="3xf332sdfs.cloudfront.net"
-town="cooker-cove"
+#town="cooker-cove"
+town="missingo"
 content_version=1
 
 # Enable printing of commands
