@@ -41,8 +41,8 @@ provider "terratowns" {
 module "home_arcanum_hosting" {
   source = "./modules/terrahouse_aws"
   user_uuid = var.teacherseat_user_uuid
-  public_path = var.arcanum_public_path
-  content_version = var.content_version
+  public_path = var.arcanum.public_path
+  content_version = var.arcanum.content_version
 
 }
 
@@ -56,14 +56,14 @@ show you how to play arcanum without spoiling the plot.
 DESCRIPTION
   domain_name = module.home_arcanum_hosting.domain_name
   town = "missingo"
-  content_version = var.content_version
+  content_version = var.arcanum.content_version
 }
 
 module "home_kohli_hosting" {
   source = "./modules/terrahouse_aws"
   user_uuid = var.teacherseat_user_uuid
-  public_path = var.kohli_public_path
-  content_version = var.content_version
+  public_path = var.kohli.public_path
+  content_version = var.kohli.content_version
 
 }
 
@@ -75,5 +75,5 @@ He plays for India and RCB.
 DESCRIPTION
   domain_name = module.home_kohli_hosting.domain_name
   town = "the-nomad-pad"
-  content_version = var.content_version
+  content_version = var.kohli.content_version
 }

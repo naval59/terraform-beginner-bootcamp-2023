@@ -11,13 +11,19 @@ variable "teacherseat_user_uuid" {
 }
 
 
-variable "content_version" {
-  type        = number
-}
+# variable "content_version" {
+#   type        = number
+# }
 
-variable "arcanum_public_path" {
-  type        = string
+variable "arcanum" {
+  type        = object({
+    public_path = string
+    content_version = number
+  })
 }
-variable "kohli_public_path" {
-  type        = string
+variable "kohli" {
+  type        = object({
+    public_path = string
+    content_version = number
+  })
 }
